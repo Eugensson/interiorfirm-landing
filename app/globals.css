@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-primary: "Playfair Display", serif;
+  --font-secondary: "Inter", sans-serif;
+
+  --color-primary: #030605;
+  --color-primary-hover: #202624;
+  --color-secondary: #ffd476;
+  --color-accent: #28887a;
+  --color-accent-hover: #24766a;
+  --color-page: #f8fbfa;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1170px;
+}
+
+body {
+  @apply font-secondary bg-accent/20 text-primary;
+}
+
+a {
+  @apply font-medium hover:text-accent-hover transition-colors duration-300;
+}
+
+.container {
+  @apply px-3.75 xl:px-0 w-full max-w-292.5 mx-auto;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply font-primary font-semibold;
+}
+
+.h1 {
+  @apply text-5xl md:text-6xl xl:text-8xl;
+}
+
+.h2 {
+  @apply mb-12 xl:mb-22.5 text-4xl md:text-5xl xl:text-6xl leading-tight;
+}
+
+.h3 {
+  @apply text-3xl md:text-4xl xl:text-5xl;
+}
+
+.h4 {
+  @apply text-2xl md:text-3xl xl:text-4xl;
+}
+
+.h5 {
+  @apply text-xl md:text-2xl font-medium;
+}
+
+.h6 {
+  @apply text-lg md:text-xl font-medium;
+}
+
+.btn {
+  @apply text-white cursor-pointer transition-colors duration-300;
+}
+
+.btn-sm {
+  @apply px-6 h-13;
+}
+
+.btn-lg {
+  @apply px-8 h-15 min-w-43;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary-hover;
+}
+
+.btn-accent {
+  @apply bg-accent hover:bg-accent-hover;
+}
+
+.input {
+  @apply h-15 w-full flex-1 outline-none bg-white;
+}
+
+.active {
+  @apply text-accent-hover;
+}
+
+.productSlider .swiper-pagination-bullet,
+.testimonialSlider .swiper-pagination-bullet {
+  background: #28887a;
+}
+
+.productSlider .swiper-button-prev,
+.productSlider .swiper-button-next {
+  color: #030605;
+}
